@@ -21,7 +21,7 @@ project_id = args['project']
 
 if args['env'] != 'gcp':
     os.environ['GOOGLE_CLOUD_DISABLE_GRPC'] = 'true'
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/opt/sa.json'
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './sa.json'
 
     if os.environ.get('PUBSUB_EMULATOR_HOST'):
         del os.environ['PUBSUB_EMULATOR_HOST']
